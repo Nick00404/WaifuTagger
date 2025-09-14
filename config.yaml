@@ -1,0 +1,22 @@
+model:
+  id: "SmilingWolf/wd-convnext-tagger-v3"
+
+paths:
+  base_dir: "mangadex_downloads"
+  output_jsonl_suffix: "mangadex_data.jsonl"
+
+folders_for_output:
+  - "01"
+  - "02"
+  - "03"
+
+tagging:
+  threshold: 0.35
+  max_tags: 15
+  blacklist_file: "blacklist.txt"  
+
+batch_processing:
+  batch_size: 4
+
+device:
+  use_cuda_if_available: true
